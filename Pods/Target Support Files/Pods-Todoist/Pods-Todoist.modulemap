@@ -1,0 +1,6 @@
+framework module Pods_Todoist {
+  umbrella header "Pods-Todoist-umbrella.h"
+
+  export *
+  module * { export * }
+}
