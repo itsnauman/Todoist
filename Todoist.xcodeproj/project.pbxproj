@@ -14,6 +14,7 @@
 		829173571C5DD120004843F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829173551C5DD120004843F5 /* Main.storyboard */; };
 		829173591C5DD120004843F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 829173581C5DD120004843F5 /* Assets.xcassets */; };
 		8291735C1C5DD120004843F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8291735A1C5DD120004843F5 /* LaunchScreen.storyboard */; };
+		82C44C921C615F460022F84E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C44C911C615F460022F84E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		829173581C5DD120004843F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8291735B1C5DD120004843F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8291735D1C5DD120004843F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C44C911C615F460022F84E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C6689BA7A096358EA39C30A6 /* Pods-Todoist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Todoist/Pods-Todoist.release.xcconfig"; sourceTree = "<group>"; };
 		F63A73139367B866160ABAE7 /* Pods-Todoist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Todoist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Todoist/Pods-Todoist.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 				8291735D1C5DD120004843F5 /* Info.plist */,
 				825375661C5DD54200970349 /* TodoItemsViewController.swift */,
 				8253756A1C5DDCA900970349 /* Todo.swift */,
+				82C44C911C615F460022F84E /* LoginViewController.swift */,
 			);
 			path = Todoist;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C44C921C615F460022F84E /* LoginViewController.swift in Sources */,
 				8253756B1C5DDCA900970349 /* Todo.swift in Sources */,
 				829173521C5DD120004843F5 /* AppDelegate.swift in Sources */,
 				825375671C5DD54200970349 /* TodoItemsViewController.swift in Sources */,

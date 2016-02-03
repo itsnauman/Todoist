@@ -12,18 +12,25 @@ import Firebase
 class TodoItemsViewController: UITableViewController {
     var items: [Todo] = []
     var ref: Firebase!
+    var user: String!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        
         self.ref.observeEventType(.Value, withBlock: { snapshot in
             var newItems: [Todo] = []
             for item in snapshot.children {
                 newItems.append(Todo(snapshot: item as! FDataSnapshot))
+                print(item)
             }
             self.items = newItems
             self.tableView.reloadData()
         })
+
+        self.ref.observeAuthEventWithBlock { authData in
+            if authData != nil {
+                self.user = authData.providerData["email"] as! String
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -31,13 +38,13 @@ class TodoItemsViewController: UITableViewController {
         
         ref = Firebase(url: "https://todonauman.firebaseio.com/")
         
-        let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addTodoItem")
+        let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addTodoItemButton")
         
         self.navigationItem.leftBarButtonItem = addButton
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    func addTodoItem() {
+    func addTodoItemButton() {
         let alertController = UIAlertController(title: "Add Item", message: "Please Enter a Todo Item", preferredStyle: .Alert)
         let confirmAction = UIAlertAction(title: "Confirm", style: .Default) { (_) -> Void in
             let field = alertController.textFields![0]
@@ -107,5 +114,4 @@ class TodoItemsViewController: UITableViewController {
         items.insert(itemToMove, atIndex: destinationIndexPath.row)
     }
     
-
 }
